@@ -21,7 +21,7 @@ public class ShrinkableObject : MonoBehaviour
         if (isTransitioning)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime* transitionSpeed);
-
+                // delta time is based on frame timings
             if (Vector3.Distance(transform.localScale, targetScale) < 0.01f)
             {
                 transform.localScale = targetScale; // force exact scale... could cause choppiness?
